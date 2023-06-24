@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    tools:context=".SignupActivity">
+
+    <TextView
+        android:layout_width="72dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:layout_margin="40dp"
+        android:text="Signup"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/signFirstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="First Name">
+    </EditText>
+
+    <EditText
+        android:id="@+id/signLastname"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Surname">
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <com.hbb20.CountryCodePicker
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            app:ccpDialog_showNameCode="false"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_contentColor="?attr/colorOnPrimary"
+            app:ccpDialog_backgroundColor="@color/white"
+            app:ccp_countryPreference="NP,GB,US"
+            app:ccp_showPhoneCode="true">
+
+        </com.hbb20.CountryCodePicker>
+
+        <EditText
+            android:id="@+id/signPhnumber"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Phone Number"></EditText>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Country of residence:"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp">
+
+    </TextView>
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/signCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ccp_showFullName="true"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_showPhoneCode="false"
+        app:ccpDialog_showNameCode="true"
+        app:ccp_countryPreference="NP,GB,US"
+        app:ccp_contentColor="?attr/colorOnPrimary"
+        app:ccpDialog_backgroundColor="@color/white"
+        app:ccp_showNameCode="false"/>
+
+    <EditText
+        android:id="@+id/signEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="E-mail"
+        android:layout_marginTop="20dp">
+    </EditText>
+
+    <EditText
+        android:id="@+id/signPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:layout_marginTop="20dp">
+    </EditText>
+
+    <EditText
+        android:id="@+id/signRepass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Re-enter Password"
+        android:layout_marginTop="20dp">
+    </EditText>
+
+    <Button
+        android:id="@+id/signCreateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:gravity="center"
+        android:layout_gravity="center"></Button>
+</LinearLayout>
